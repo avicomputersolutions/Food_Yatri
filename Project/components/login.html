@@ -1,138 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
+    <link rel="stylesheet" href="/Food_Yatri/Project/style.css" />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url("/Food_Yatri/Project/res/Login.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            /* background-color: black; */
-        }
-        nav {
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: white;
-            margin-right: 50px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        .nav .ul .li .a .curved-rect {
-            width: 200px;
-            height: 30px;
-            background-color: red;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            text-decoration: none;
-            color: white;
-            margin-left: 250px;
-        }
-        nav ul li a:hover {
-            color: red;
-        }
-        #sign {
-            background-color: red;
-            border-radius: 20px;
-            padding: 4px 10px 4px 10px;
-        }
-        #sign:hover {
-            color: white;
-        }
-        .textbox {
-            border: solid;
-            width: 270px;
-            height: 35px;
-            background-color: red;
-            border-radius: 20px;
-            display: flex;
-            /* justify-content: center; */
-            /* align-items: center; */
-            text-align: center;
-            text-decoration: none;
-            color: white;
-            margin-left: 200px;
-        }
-        ::placeholder {
-            color: white;
-            opacity: 0.8;
-        }
-        #submit {
-            width: 100px;
-            height: 40px;
-            background-color: white;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: red;
-            margin-left: 290px;
-        }
-        #signup_heading{
-            color: white;
-            font-size: 60px;
-            margin: 100px 100px 100px 100px ;
-        }
+      body {
+        background-size: cover;
+        background-position: center;
+        min-height: 80vh;
+        background-image: url(/Food_Yatri/Project/res/Login.jpg);
+      }
+
+      .signup_box {
+        margin-top: 100px;
+        width: 500px;
+        height: auto;
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 40px 0px;
+      }
+
+      #signup_heading {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        padding: 30px;
+        /* margin-left: 250px; */
+      }
+
+      .login_input {
+        max-width: 300px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        /* display: flex; */
+        align-items: center;
+        justify-content: space-between;
+        /* margin-left: 150px; */
+      }
+
+      .textbox {
+        border: none;
+        width: 95%;
+        height: 40px;
+        background-color: #f2f2f2;
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      #submit {
+        display: block;
+        width: 100%;
+        height: 40px;
+        background-color: red;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        text-decoration: none;
+      }
+
+      #submit:hover {
+        background-color: darkred;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">FOODYATRI</div>
-            <ul>
-                <li><a id="sign" href="/Signup.html">Signup</a></li>
-                <li><a href="#" class="curved_rect">Login</a></li>
-                <li><a href="#">Best-Seller</a></li>
-                <li><a href="#">Upload Content</a></li>
-                <li><a href="vlogger.html">Top Vlogger</a></li>
-                <!-- <li><a href="#">Upload Content</a></li> -->
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">
+          <img height="50" src="/Food_Yatri/Project/res/logo.png" alt="Logo" />
+        </div>
+        <ul>
+          <li>
+            <a href="/Food_Yatri/Project/components/signup.html">Sign up</a>
+          </li>
+          <li><a href="/Food_Yatri/Project/components/login.html">Login</a></li>
+          <li><a href="/Food_Yatri/Project/components/bestseller.html">Best-Seller</a></li>
+          <li><a href="/Food_Yatri/Project/components/uploadcontent.html">Upload Content</a></li>
+          <li><a href="/Food_Yatri/Project/components/vlogger.html">Top Vloggers</a></li>
+        </ul>
+        <div id="profile">
+          <a href="#"
+            ><img
+              height="30"
+              src="/Food_Yatri/Project/res/profile.png"
+              alt="Profile"
+          /></a>
+        </div>
+      </nav>
     </header>
     <section class="signup_box">
-        <H1 id="signup_heading">Login</H1>
-        <div>
-            <form action="/signup" method="post">
-                <input type="text" class="textbox" name="username" placeholder="Username" required />
-                <br>
-                <input type="password" class="textbox" name="passwd" placeholder="Password" required />
-                <br>
-            </form>
-            <a href="https://example.com" id="submit"><b>Submit</b></a>
-        </div>
+      <h1 id="signup_heading">Login</h1>
+      <div class="login_input">
+        <form id="loginForm" action="/login" method="post">
+          <input
+            type="text"
+            class="textbox"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+          /><br />
+          <input
+            type="password"
+            class="textbox"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <br />
+          <button type="submit" id="submit"><b>Submit</b></button>
+        </form>
+      </div>
     </section>
-</body>
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Check if it's a vlogger
+        if (username.toLowerCase() === "vlogger" && password === "vloggerpassword") {
+          window.location.href = "/Food_Yatri/Project/components/vlogger.html";
+        } 
+        // Check if it's a user
+        else if (username.toLowerCase() === "user" && password === "userpassword") {
+          window.location.href = "/Food_Yatri/Project/components/user.html";
+        } 
+        else {
+          alert("Invalid username or password.");
+        }
+      });
+
+      var navbarContainer = document.getElementsByClassName("navbar")[0];
+
+        var links = navbarContainer.getElementsByClassName("navbar a");
+        
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+    </script>
+  </body>
 </html>
+

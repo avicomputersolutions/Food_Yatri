@@ -10,31 +10,26 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url("/res/Signup.png");
-            background-size:cover;
+            background-image: url("/Food_Yatri/Project/res/Signup.png");
+            background-size: cover;
             background-position: center;
-            height: 100vh;
-            /* display: flex; */
-            /* align-items: center; */
-            /* justify-content: center; */
+            min-height: 100vh;
             background-color: black;
         }
+
         nav {
-            /* position: fixed; */
             top: 0;
             left: 0;
             width: 100%;
-            /* background-color: rgba(255, 255, 255, 0.7); */
             padding: 20px;
             box-sizing: border-box;
             display: flex;
-            overflow: hidden;
-            /* justify-content: space-between; */
-            /* align-items: center; */
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            margin-right: 50px;
+            margin-right: 20px;
         }
 
         nav ul {
@@ -42,101 +37,113 @@
             margin: 0;
             padding: 0;
             display: flex;
-            margin-top: 1.75%;
-            /* margin-left: 30%; */
+            align-items: center;
         }
 
         nav ul li {
             margin-right: 20px;
         }
 
-        /* nav ul li:last-child {
-            margin-right: 0;
-        } */
-
         nav ul li a {
-            display: block;
             text-decoration: none;
             color: white;
             font-weight: bold;
         }
 
         nav ul li a:hover {
-            /* background-color: red; */
-            color: white;
+            color: red;
         }
+
         .active {
-            width: 75px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            text-decoration: none;
+            padding: 10px 20px;
             border-radius: 25px;
             background-color: red;
             color: white;
         }
+
         #profile {
-            margin-left: 53%;
-            margin-top: 0.5%;
+            margin-left: auto;
         }
+
         .main-content {
             text-align: center;
-            /* padding: 50px; */
             color: white;
-            margin-right: 50%;
         }
-        .options img:not(:last-child) {
-            margin-right: 38px;
-            margin-top: 50px;
-            margin-bottom: 50px;
+
+        .options img {
+            width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
         }
+
         .options button {
             background-color: #FF5733;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
-            margin-right: 50px;
+            margin: 10px;
             cursor: pointer;
-            width: 25%;
-            height: 45px;
+            width: 100%;
+            max-width: 200px;
             border-radius: 25px;
         }
+
         .intro {
-            /* color: rgb(119, 218, 15); */
-            width: 100%;
-            /* background-color: black; */
             margin-top: 35px;
         }
+
         #pro_name {
-            color: white;
-            font-size: 50px;
-            margin-left: 40px;
-            margin-top: 0px;
+            font-size: 2em;
+            margin: 0;
         }
+
+        @media only screen and (min-width: 768px) {
+            nav ul {
+                margin-top: 0;
+            }
+            .options img {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            .options button {
+                margin-top: 0;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            nav ul {
+                margin-top: 0;
+            }
+            .options img {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            .options button {
+                margin-top: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img height="75" src="/res/logo.png" alt="Logo">
+                <a href="/Food_Yatri/Project/index.html"><img height="75" src="/Food_Yatri/Project/res/logo.png" alt="Logo"></a>
             </div>
             <ul class="navbar">
                 <li><a href="/components/signup.html" class="active">Sign up</a></li>
-                <li><a href="/components/login.html">Login</a></li>
+                <li><a href="/Food_Yatri/Project/components/login.html">Login</a></li>
                 <li><a href="/components/bestseller.html">Best-Seller</a></li>
                 <li><a href="/components/uploadcontent.html">Upload Content</a></li>
                 <li><a href="/components/vlogger.html">Top Vloggers</a></li>
             </ul>
             <div id="profile">
-                <a href="#"><img height="50" src="/res/profile.png" alt="Profile"></a>
+                <a href="#"><img height="50" src="/Food_Yatri/Project/res/profile.png" alt="Profile"></a>
             </div>
         </nav>
     </header>

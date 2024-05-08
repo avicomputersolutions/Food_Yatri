@@ -5,29 +5,23 @@ body {
   background-image: url("res/home.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* background-color: black; */
+  min-height: 100vh;
 }
 
 nav {
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: rgba(255, 255, 255, 0.7); */
   padding: 20px;
   box-sizing: border-box;
   display: flex;
-  /* overflow: hidden; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 nav ul {
@@ -35,12 +29,11 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  margin-top: 1.75%;
-  /* margin-left: 30%; */
+  gap: 40px;
 }
 
 nav ul li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 nav ul li:last-child {
@@ -57,41 +50,24 @@ nav ul li a:hover {
   color: red;
 }
 
-#profile {
-  margin-left: 55%;
-  margin-top: 0.5%;
-}
-
 .intro {
-  /* color: rgb(119, 218, 15); */
-  width: 100%;
-  /* background-color: black; */
-  margin-top: 100px;
+  color: white;
+  padding: 100px 20px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 #pro_name {
-  color: rgb(119, 218, 15);
-  font-size: 60px;
-  margin-left: 40px;
-  margin-top: 0px;
+  font-size: 3em;
 }
 
 #pro_dec {
-  color: white;
-  font-size: 40px;
-  margin-left: 40px;
-  margin-top: 0px;
-}
-
-#pro_dec:hover {
-  width: 850px;
-  background-color: red;
-  color: white;
+  font-size: 1.5em;
 }
 
 .oval-box {
   width: 200px;
-  height: 30px;
+  height: 40px;
   background-color: red;
   border-radius: 20px;
   display: flex;
@@ -100,19 +76,14 @@ nav ul li a:hover {
   text-align: center;
   text-decoration: none;
   color: white;
-  margin-left: 250px;
+  margin: 20px auto;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   color: white;
-}
-#fooder_dec {
-  /* margin-left: 500px; */
-  margin-top: 90px;
-  text-align: right;
-}
-.active {
-  background-color: #4caf50;
-  color: white;
+  text-align: center;
+  padding: 20px;
 }

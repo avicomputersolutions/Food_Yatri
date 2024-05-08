@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("/Food_Yatri/Project/res/Login.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* background-color: black; */
+        }
+        nav {
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            margin-right: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .nav .ul .li .a .curved-rect {
+            width: 200px;
+            height: 30px;
+            background-color: red;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            margin-left: 250px;
+        }
+        nav ul li a:hover {
+            color: red;
+        }
+        #sign {
+            background-color: red;
+            border-radius: 20px;
+            padding: 4px 10px 4px 10px;
+        }
+        #sign:hover {
+            color: white;
+        }
+        .textbox {
+            border: solid;
+            width: 270px;
+            height: 35px;
+            background-color: red;
+            border-radius: 20px;
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            margin-left: 200px;
+        }
+        ::placeholder {
+            color: white;
+            opacity: 0.8;
+        }
+        #submit {
+            width: 100px;
+            height: 40px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: red;
+            margin-left: 290px;
+        }
+        #signup_heading{
+            color: white;
+            font-size: 60px;
+            margin: 100px 100px 100px 100px ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FOODYATRI</div>
+            <ul>
+                <li><a id="sign" href="/Signup.html">Signup</a></li>
+                <li><a href="#" class="curved_rect">Login</a></li>
+                <li><a href="#">Best-Seller</a></li>
+                <li><a href="#">Upload Content</a></li>
+                <li><a href="vlogger.html">Top Vlogger</a></li>
+                <!-- <li><a href="#">Upload Content</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <section class="signup_box">
+        <H1 id="signup_heading">Login</H1>
+        <div>
+            <form action="/signup" method="post">
+                <input type="text" class="textbox" name="username" placeholder="Username" required />
+                <br>
+                <input type="password" class="textbox" name="passwd" placeholder="Password" required />
+                <br>
+            </form>
+            <a href="https://example.com" id="submit"><b>Submit</b></a>
+        </div>
+    </section>
+</body>
+</html>

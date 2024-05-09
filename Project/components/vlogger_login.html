@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title>User Login Page</title>
     <link rel="stylesheet" href="/Food_Yatri/Project/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -16,7 +16,7 @@
       }
 
       .signup_box {
-        margin-top: 100px;
+        margin-top: 70px;
         width: 500px;
         height: auto;
         border-radius: 25px;
@@ -29,6 +29,7 @@
         text-align: center;
         padding: 30px;
         /* margin-left: 250px; */
+        margin-bottom: 0px;
       }
 
       .login_input {
@@ -40,7 +41,8 @@
         /* display: flex; */
         align-items: center;
         justify-content: space-between;
-        /* margin-left: 150px; */
+        margin-left: 100px;
+        
       }
 
       .textbox {
@@ -52,7 +54,6 @@
         padding: 10px;
         margin-bottom: 20px;
       }
-
       .password-container {
         position: relative;
         border: none;
@@ -70,7 +71,6 @@
       transform: translateY(-50%);
       cursor: pointer;
     }
-
       #submit {
         display: block;
         width: 100%;
@@ -114,7 +114,7 @@
       </nav>
     </header>
     <section class="signup_box">
-      <h1 id="signup_heading">Login</h1>
+      <h1 id="signup_heading">Sign In</h1>
       <div class="login_input">
         <form id="loginForm" action="/login" method="post">
           <input
@@ -122,20 +122,41 @@
             class="textbox"
             id="username"
             name="username"
-            placeholder="Username"
+            placeholder="Name"
+            required
+          /><br />
+          <input
+            type="text"
+            class="textbox"
+            id="insta"
+            name="insta"
+            placeholder="Instagram"
+            required
+          /><br />
+          <input
+            type="text"
+            class="textbox"
+            id="youtube"
+            name="youtube"
+            placeholder="Youtube"
             required
           /><br />
           <div class="password-container">
-            <input
-              type="password"
-              class="password-container"
-              id="passwordInput"
-              name="password"
-              placeholder="Password"
-              required
-            />
+          <input
+            type="password"
+            class="password-container"
+            id="passwordInput"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <i class="toggle-password fas fa-eye" id="togglePassword"></i>
+        </div>
+          <!-- <div class="password-container">
+            <input type="password" id="passwordInput" placeholder="Enter Password">
             <i class="toggle-password fas fa-eye" id="togglePassword"></i>
-          </div><br>
+          </div> -->
+          <br />
           <button type="submit" id="submit"><b>Submit</b></button>
         </form>
       </div>
@@ -152,7 +173,11 @@
         });
 
 
-      document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+
+        document.querySelector("#toggle-password").addEventListener("click", togglePasswordVisibility);
+        document.getElementById("toggle-password").addEventListener("click", togglePasswordVisibility);
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
 
         var username = document.getElementById("username").value;

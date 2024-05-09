@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Login Page</title>
     <link rel="stylesheet" href="/Food_Yatri/Project/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
       body {
         background-size: cover;
@@ -39,7 +41,7 @@
         /* display: flex; */
         align-items: center;
         justify-content: space-between;
-        /* margin-left: 150px; */
+        margin-left: 100px;
         
       }
 
@@ -52,7 +54,23 @@
         padding: 10px;
         margin-bottom: 20px;
       }
-
+      .password-container {
+        position: relative;
+        border: none;
+        width: 95%;
+        height: 30px;
+        /* background-color: #f2f2f2; */
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 20px; 
+    }
+    .toggle-password {
+      position:absolute;
+      top: 65%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
       #submit {
         display: block;
         width: 100%;
@@ -115,21 +133,43 @@
             placeholder="Email"
             required
           /><br />
+          <div class="password-container">
           <input
             type="password"
-            class="textbox"
-            id="password"
+            class="password-container"
+            id="passwordInput"
             name="password"
             placeholder="Password"
             required
           />
+          <i class="toggle-password fas fa-eye" id="togglePassword"></i>
+        </div>
+          <!-- <div class="password-container">
+            <input type="password" id="passwordInput" placeholder="Enter Password">
+            <i class="toggle-password fas fa-eye" id="togglePassword"></i>
+          </div> -->
           <br />
           <button type="submit" id="submit"><b>Submit</b></button>
         </form>
       </div>
     </section>
     <script>
-      document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+        const passwordInput = document.getElementById('passwordInput');
+        const togglePassword = document.getElementById('togglePassword');
+
+        togglePassword.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+        });
+
+
+
+
+        document.querySelector("#toggle-password").addEventListener("click", togglePasswordVisibility);
+        document.getElementById("toggle-password").addEventListener("click", togglePasswordVisibility);
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
 
         var username = document.getElementById("username").value;

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <link rel="stylesheet" href="/Food_Yatri/Project/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
       body {
         background-size: cover;
@@ -18,7 +20,7 @@
         width: 500px;
         height: auto;
         border-radius: 25px;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 40px 0px;
+        /* box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 40px 0px; */
       }
 
       #signup_heading {
@@ -32,7 +34,7 @@
       .login_input {
         max-width: 300px;
         margin: 0 auto;
-        background: rgba(255, 255, 255, 0.8);
+        /* background: rgba(255, 255, 255, 0.8); */
         padding: 20px;
         border-radius: 10px;
         /* display: flex; */
@@ -44,12 +46,30 @@
       .textbox {
         border: none;
         width: 95%;
-        height: 40px;
+        height: 30px;
         background-color: #f2f2f2;
         border-radius: 20px;
         padding: 10px;
         margin-bottom: 20px;
       }
+
+      .password-container {
+        position: relative;
+        border: none;
+        width: 95%;
+        height: 30px;
+        /* background-color: #f2f2f2; */
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 20px; 
+    }
+    .toggle-password {
+      position:absolute;
+      top: 65%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
 
       #submit {
         display: block;
@@ -105,20 +125,33 @@
             placeholder="Username"
             required
           /><br />
-          <input
-            type="password"
-            class="textbox"
-            id="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <br />
+          <div class="password-container">
+            <input
+              type="password"
+              class="password-container"
+              id="passwordInput"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <i class="toggle-password fas fa-eye" id="togglePassword"></i>
+          </div><br>
           <button type="submit" id="submit"><b>Submit</b></button>
         </form>
       </div>
     </section>
     <script>
+
+        const passwordInput = document.getElementById('passwordInput');
+        const togglePassword = document.getElementById('togglePassword');
+
+        togglePassword.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+        });
+
+
       document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
 
